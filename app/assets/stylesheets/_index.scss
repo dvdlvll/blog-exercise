@@ -1,0 +1,30 @@
+@import "./mixins";
+@import "./variables";
+
+a {
+  text-decoration: none;
+  @include font-properties(black, $body-font, 1em, 400, left);
+}
+
+.main-container {
+  @include flex-properties(column, center, flex-start);
+  @include dimension-properties(80vh, 50%);
+  border-radius: 25px;
+  background-color: pink;
+
+  padding: 0 2%;
+
+  .heading {
+    @include font-properties(black, $heading-font, 3.5em, 400, left);
+    margin-bottom: 5%;
+  }
+
+  .body {
+    @include font-properties(black, $body-font, 1em, 400, left);
+    margin-bottom: 5%;
+  }
+
+  .list {
+    margin-bottom: 7%;
+  }
+}
